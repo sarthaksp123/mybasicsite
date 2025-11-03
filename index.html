@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sarthak Pradhan | My First Webpage</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      background-color: #0077cc;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to Sarthak Pradhan’s Website</h1>
+  </header>
+
+  <main>
+    <p>Hello! My name is <strong>Sarthak Pradhan</strong>. This is a simple webpage created using basic HTML, CSS, and JavaScript.</p>
+    <p>Click the button below to see some JavaScript in action:</p>
+    <button id="clickMe">Click Me!</button>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Sarthak Pradhan</p>
+  </footer>
+
+  <script>
+    // Insert the current year in the footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Add a simple click event
+    document.getElementById("clickMe").addEventListener("click", function() {
+      alert("Hey Sarthak! You just ran JavaScript on your own webpage!");
+    });
+  </script>
+</body>
+</html>
