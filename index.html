@@ -27,6 +27,32 @@
       margin: auto;
     }
 
+    h2 {
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Button-style links */
+    .link-row {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin: 0.5rem 0 1.5rem 0;
+    }
+    .btn-link {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #0077cc;
+      color: white;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    .btn-link:hover {
+      background-color: #005fa3;
+    }
+
+    /* Existing button, kept in case you still want to click it */
     button {
       background-color: #0077cc;
       color: white;
@@ -36,7 +62,6 @@
       border-radius: 6px;
       cursor: pointer;
     }
-
     button:hover {
       background-color: #005fa3;
     }
@@ -49,9 +74,16 @@
   </header>
 
   <main>
-    <p>Hello! My name is <strong>Sarthak Pradhan</strong>. This is a simple webpage created using basic HTML, CSS, and JavaScript.</p>
-    <p>Click the button below to see some JavaScript in action:</p>
-    <button id="clickMe">Click Me!</button>
+    <!-- Removed the two lines you asked to clean up -->
+
+    <h2>My Favorite News</h2>
+    <div class="link-row">
+      <a class="btn-link" href="https://www.wsj.com" target="_blank" rel="noopener noreferrer">The Wall Street Journal</a>
+      <a class="btn-link" href="https://www.cnn.com" target="_blank" rel="noopener noreferrer">CNN</a>
+    </div>
+
+    <!-- Optional: keep the button if you still want the JS demo -->
+    <button id="clickMe">Say Hi</button>
   </main>
 
   <footer>
@@ -62,9 +94,9 @@
     // Insert the current year in the footer
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Add a simple click event
+    // Simple click event (optional)
     document.getElementById("clickMe").addEventListener("click", function() {
-      alert("Hey Sarthak! You just ran JavaScript on your own webpage!");
+      alert("Hey Sarthak! 👋");
     });
   </script>
 </body>
